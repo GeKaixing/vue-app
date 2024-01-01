@@ -5,6 +5,7 @@ import { Search ,Dianziqian} from "@icon-park/vue-next";
 import { useRoute } from 'vue-router';
 import {useImgSelect }from '../../Store'
 import { storeToRefs } from "pinia";
+import axios from "axios";
 const store =useImgSelect()
 const {imgarr,show_img}=storeToRefs(store)
 const selectlanguage=ref('简体中文')
@@ -21,6 +22,12 @@ watchEffect(()=>{
     log_color.value='#8a8a8a'
   }
 })
+/* 
+axios.get('http://127.0.0.1:3000').then((response)=>{
+  console.log(response.data);
+}).catch((error)=>{
+console.log(error);
+}) */
 </script>
 <template>
   <div class="header">
