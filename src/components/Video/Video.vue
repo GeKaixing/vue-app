@@ -3,24 +3,25 @@ import VideOrArticleLayout from '../Layout/VideOrArticleLayout.vue';
 import BodyContextLayout from '../Layout/BodyContextLayout.vue';
 import { PlayOne } from "@icon-park/vue-next";
 import { useRouter } from 'vue-router';
+
 const url=(url)=>{
     return new URL(`${url}`,import.meta.url).href
 }
 const SimulateArr=[
     {
-        coverPicture:  url("../../img/neom-nMzbnMzMjYU-unsplash.jpg"),
+        coverPicture:url("../../../public/img/neom-nMzbnMzMjYU-unsplash.jpg"),
         playdate:'01:33'
     },
     {
-        coverPicture:url("../../img/cai-fang-mIXAcsAQaNg-unsplash.jpg"),
+        coverPicture:url("../../../public/img/cai-fang-mIXAcsAQaNg-unsplash.jpg"),
         playdate:'04:44'
     },
     {
-        coverPicture:url("../../img/peter-herrmann-ZImdf70KrSU-unsplash.jpg"),
+        coverPicture:url("../../../public/img/peter-herrmann-ZImdf70KrSU-unsplash.jpg"),
         playdate:'06:33'
     },
     {
-        coverPicture:url("../../img/chean-ang-heng-2ijGsqwQmPk-unsplash.jpg"),
+        coverPicture:url("../../../public/img/chean-ang-heng-2ijGsqwQmPk-unsplash.jpg"),
         playdate:'03:00'
     },
 ]  

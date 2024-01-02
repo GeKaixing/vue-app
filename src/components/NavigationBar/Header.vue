@@ -10,10 +10,6 @@ const store =useImgSelect()
 const {imgarr,show_img}=storeToRefs(store)
 const selectlanguage=ref('简体中文')
 const route=useRoute()
-// 废弃
-/* const url=computed(()=>{
-  return new URL(`${imgarr.value[show_img.value].imgurl}`,import.meta.url).href
-}) */
 const log_color=ref('#ffffff')
 watchEffect(()=>{
   if(route.path=='/'){

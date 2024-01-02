@@ -1,18 +1,21 @@
 import { ref } from "vue";
 import { defineStore } from "pinia";
 export const useImgSelect = defineStore('useImgSelect', () => {
+  const url = (url) => {
+    return new URL(`${url}`, import.meta.url).href
+  }
   const imgarr = ref([
     {
       name: '车',
-      imgurl: './img/chean-ang-heng-2ijGsqwQmPk-unsplash.jpg'
+      imgurl: "../public/img/chean-ang-heng-2ijGsqwQmPk-unsplash.jpg"
     },
     {
       name: "桥底",
-      imgurl: './img/peter-herrmann-ZImdf70KrSU-unsplash.jpg'
+      imgurl: '../public/img/peter-herrmann-ZImdf70KrSU-unsplash.jpg'
     },
     {
       name: "楼低",
-      imgurl: './img/cai-fang-mIXAcsAQaNg-unsplash.jpg'
+      imgurl: '../public/img/cai-fang-mIXAcsAQaNg-unsplash.jpg'
     }
   ])
   const show_img = ref(0);
@@ -29,7 +32,7 @@ export const useImgSelect = defineStore('useImgSelect', () => {
     if (show_img.value === imgarr.value.length - 1) {
       show_img.value = 0;
     } else {
-      show_img.value++; 
+      show_img.value++;
     }
   }
   return {

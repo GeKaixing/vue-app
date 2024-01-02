@@ -1,5 +1,5 @@
 <script setup>
-import { Facebook, Twitter, Instagram, Data } from "@icon-park/vue-next";
+import { Facebook, Twitter, Instagram, } from "@icon-park/vue-next";
 import { storeToRefs } from "pinia";
 import { useImgSelect } from '../../Store'
 import { useRouter } from "vue-router";
