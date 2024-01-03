@@ -23,6 +23,7 @@ import VideOrArticleLayout from '../Layout/VideOrArticleLayout.vue'
     width: 957px;
 }
 .search_context{
+    margin-top: 16px;
     display: grid;
     grid-template-columns: repeat(3, 280px);
     grid-column-gap: 58px;

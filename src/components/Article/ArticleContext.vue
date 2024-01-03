@@ -24,10 +24,12 @@ onMounted(() => {
 </template>
 <style>
 .articleContext {
+    
     width: 813px;
     margin: 0 auto;
     margin-top: 16px;
     background: #D9D9D9;
+    
 }
 
 .articleContext_box {
@@ -37,5 +39,6 @@ onMounted(() => {
     margin-left: 49px;
     margin-right: 49px;
     margin-bottom: 24px;
+    margin-right: calc(100% - 100vw);
 }
 </style>

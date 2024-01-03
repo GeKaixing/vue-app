@@ -1,6 +1,5 @@
 <script setup>
-import BodyContextLayout from '../Layout/BodyContextLayout.vue';
-import { Pause, PlayOne, Tub } from "@icon-park/vue-next";
+import { Pause, PlayOne, } from "@icon-park/vue-next";
 import { ref, onMounted } from 'vue';
 const video = ref(null)
 const videoplay = ref(null)
@@ -21,20 +20,33 @@ onMounted(() => {
         }
     }
     video.value.addEventListener('loadedmetadata', function () {
+        duration()
+    });
+    function secondsToMinutesAndSeconds(currentTime) {
+        var minutes = Math.floor(currentTime / 60);
+        var remainingSeconds = currentTime % 60;
+        // 格式化时间
+        var formattedTime = (minutes < 10 ? '0' : '') + minutes + ':' + (remainingSeconds < 10 ? '0' : '') + Math.floor(remainingSeconds);
+        return formattedTime;
+    }
+
+    const duration = () => {
         const videoDuration = Math.floor(video.value.duration / 60);
         const seconds = Math.floor(video.value.duration % 60)
         videotiem.value.textContent = `${videoDuration}:${seconds}`
-    });
+    }
     const run = () => {
         const ll = (video.value.currentTime / video.value.duration).toFixed(2)
         const ff = Math.floor(progress_bar.value.clientWidth * ll)
         currentTimes.value.style.width = ff + 'px';
+        videotiem.value.textContent = secondsToMinutesAndSeconds(video.value.currentTime)
     }
     progress_bar.value.onclick = (e) => {
         const gg = (e.clientX / progress_bar.value.clientWidth).toFixed(2)
         //当前时间
         const cc = video.duration * gg
         video.currentTime = cc;
+
         run()
     }
 })
@@ -43,7 +55,7 @@ onMounted(() => {
     <!-- 外围的div，画圈 -->
     <div class='video_box'>
         <video ref="video">
-            <source src="../../video/test.mp4">
+            <source src="/video/test.mp4">
         </video>
         <div class="controller">
             <div class="progress_bar" ref="progress_bar">
@@ -114,10 +126,12 @@ video {
     display: flex;
     justify-content: space-between;
 }
+
 .videotiem {
     display: flex;
     align-items: center
 }
+
 span {
     color: #FFF;
     font-family: Inter;
@@ -126,8 +140,9 @@ span {
     font-weight: 900;
     line-height: normal;
 }
-span::before{
-    content:'';
+
+span::before {
+    content: '';
     font-size: 40px;
 }
 </style>
