@@ -3,7 +3,7 @@
 //new name:login
 import { Facebook, Twitter, Instagram, } from "@icon-park/vue-next";
 import Login from '../Login/Login.vue';
-import { useLogin } from "../../Login";
+import { useLogin } from "../../Store/LoginStore";
 import { storeToRefs } from "pinia";
 import { Avatar } from "@icon-park/vue-next";
 const useLoginStore = useLogin()

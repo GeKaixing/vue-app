@@ -1,7 +1,7 @@
 <script setup>
 import { Facebook, Twitter, Instagram, } from "@icon-park/vue-next";
 import { storeToRefs } from "pinia";
-import { useImgSelect } from '../../Store'
+import { useImgSelect } from '../../Store/SelectBlackImgStore'
 import { useRouter } from "vue-router";
 const router=useRouter();
 const store = useImgSelect()

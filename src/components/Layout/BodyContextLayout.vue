@@ -1,5 +1,4 @@
 <script setup>
-import FooterImg from '../Home/FooterImg.vue';
 </script>
 <template>
     <div class="article_layout">
@@ -12,10 +11,5 @@ import FooterImg from '../Home/FooterImg.vue';
     margin-top: 16px;
     list-style: none;
     width: 957px;
-    display: grid;
-    grid-template-columns: repeat(3, 280px);
-    grid-column-gap: 58px;
-    grid-row-gap: 40px;
-
 }
 </style>

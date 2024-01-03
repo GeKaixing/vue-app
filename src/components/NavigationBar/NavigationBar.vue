@@ -1,7 +1,7 @@
 <script setup>
 import { computed, reactive, ref, watchEffect } from 'vue'
 import { useRoute } from 'vue-router';
-import { useLogin } from "../../Login";
+import { useLogin } from "../../Store/LoginStore";
 import { storeToRefs } from "pinia";
 const useLoginStore = useLogin()
 const { loginState } = storeToRefs(useLoginStore)
@@ -35,7 +35,7 @@ const d = computed(() => {
     <div class="title">
       <router-link class="router-link" to="/" > 主页</router-link>
       <router-link :class="['router-link']" to="/video"> 视频</router-link>
-      <router-link :class="['router-link']" to="/user">{{ loginState.name ? `${loginState.name}` : '未登陆' }}</router-link>
+      <router-link :class="['router-link']" to="/userinfo">{{ loginState.name ? `${loginState.name}` : '未登陆' }}</router-link>
       <router-link :class="['router-link']" to="/article"> 文章</router-link>
     </div>
   </div>

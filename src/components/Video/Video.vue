@@ -31,7 +31,7 @@ const clickurlil=(url)=>{
 }
 </script>
 <template>
-    <BodyContextLayout>
+    <BodyContextLayout class="byl">
         <VideOrArticleLayout v-for="(item,key,index) in SimulateArr" @click="clickurlil(item.playdate)">
             <img class="imgviode" :src="item.coverPicture">
             <div class="playbutton">
@@ -44,6 +44,12 @@ const clickurlil=(url)=>{
     </BodyContextLayout>
 </template>
 <style>
+.byl{
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    grid-column-gap: 58px;
+    grid-row-gap: 40px;
+}
 /* 子绝父相 */
 .imgviode {
     position: relative;

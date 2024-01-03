@@ -1,6 +1,6 @@
 <script setup>
 import { Avatar, } from "@icon-park/vue-next";
-import { useLogin } from "../../Login";
+import { useLogin } from "../../Store/LoginStore";
 import { storeToRefs } from "pinia";
 const useLoginStore = useLogin()
 const { loginState } = storeToRefs(useLoginStore)

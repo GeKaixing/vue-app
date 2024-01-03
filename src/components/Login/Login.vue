@@ -1,5 +1,5 @@
 <script setup>
-import { useLogin } from '../../Login'
+import { useLogin } from '../../Store/LoginStore'
 import { storeToRefs } from 'pinia';
 const { isShowLoginHandler } = defineProps(['isShowLoginHandler'])
 const store = useLogin()

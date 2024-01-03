@@ -1,8 +1,8 @@
 <script setup>
 import { ArrowRight, Left, Right, Avatar, Log, MapDistance, DoubleBed } from "@icon-park/vue-next";
-import {useImgSelect }from '../../Store'
+import {useImgSelect }from '../../Store/SelectBlackImgStore'
 import { storeToRefs } from "pinia";
-import { useLogin } from "../../Login";
+import { useLogin } from "../../Store/LoginStore";
 import Login from "../Login/Login.vue";
 import FooterImg from "./FooterImg.vue";
 import { useRouter } from 'vue-router';
