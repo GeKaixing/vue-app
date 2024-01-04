@@ -34,6 +34,7 @@ const routes = [{
     component: ArticleViewVue,
 }, {
     path: '/login',
+    name:'login',
     component: LoginViewVue,
 }, {
     path: '/article/:id',
