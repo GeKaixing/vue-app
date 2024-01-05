@@ -20,7 +20,7 @@ onMounted(() => {
         const selection = window.getSelection()
         const selectiontext = selection.toString()
         const ranges = selection.getRangeAt(0);
-        if (selectiontext) {
+        if (new String(selectiontext) instanceof String) {
             const docObj = ranges.extractContents(); //移动了Range 中的内容从文档树到DocumentFragment（文档片段对象)。
             console.log(docObj);
             let dom = document.createElement('div');
